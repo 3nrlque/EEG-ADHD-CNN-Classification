@@ -35,6 +35,8 @@ The project uses a subset consisting of healthy adults and patients with ADHD ol
 | Original EEG channels | 26 |
 | Channels used in the experiments | 19 or 4 |
 
+> **Dataset access:** Please consult the dataset provider's terms and conditions. This repository does not imply ownership of, or unrestricted redistribution rights to, the original EEG recordings.
+
 ## Methodology
 
 Each two-minute recording is divided into twelve non-overlapping segments of 10 seconds. Each segment is represented by a spectrogram, resulting in 924 samples per recording condition and channel configuration.
