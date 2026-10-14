@@ -65,7 +65,9 @@ Two channel configurations are investigated:
 
 - **19-channel configuration:** uses standard 10-20 electrode system.
 
-![example of a 19-channel spectrogram](data_preprocessing/spectrogram_control_19c_example.png)
+<p align="center">
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/spectrogram_control_19c_example.png"/>
+</p>
 
 - **4-channel configuration:** focusing on frontal and central brain regions.
 
