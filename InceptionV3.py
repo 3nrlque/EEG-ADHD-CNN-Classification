@@ -124,7 +124,7 @@ def build_inception(input_shape=(224, 224, 3)):
 if __name__ == "__main__":
 
     # Path to the directory containing dataset
-    DATA_DIR = "/mnt/c/Users/Enrique/Desktop/Studia/magisterka/praca magisterska/10s SEGMENTS 4 kanały/spektrogramy"
+    DATA_DIR = "///"
 
     # Load spectrograms, binary labels, and patient group identifiers
     X, y, groups = load_data(DATA_DIR)
