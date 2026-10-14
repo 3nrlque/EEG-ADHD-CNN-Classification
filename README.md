@@ -39,6 +39,11 @@ The project uses a subset consisting of healthy adults and patients with ADHD ol
 
 Each two-minute recording is divided into twelve non-overlapping segments of 10 seconds. Each segment is represented by a spectrogram, resulting in 924 samples per recording condition and channel configuration.
 
+<p align="center">
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/preprecessing_pipeline.png"/>
+</p>
+
+
 ### EEG Preprocessing
 
 The EEG recordings were preprocessed before being used in the experiments. The preprocessing pipeline included:
