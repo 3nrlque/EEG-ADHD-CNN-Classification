@@ -106,7 +106,7 @@ For each participant, the model produces a probability for every spectrogram. Th
 Model performance is assessed using the following classification metrics:
 
 - **Accuracy:** proportion of correctly classified participants.
-- **Sensitivity (Recall):** proportion of participants with ADHD correctly identified.
+- **Recall:** proportion of participants with ADHD correctly identified.
 - **Specificity:** proportion of control participants correctly identified.
 - **Precision:** proportion of positive predictions that are correct.
 - **F1-score:** harmonic mean of precision and recall.
