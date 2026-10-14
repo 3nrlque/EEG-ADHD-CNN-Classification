@@ -71,7 +71,9 @@ Two channel configurations are investigated:
 
 - **4-channel configuration:** focusing on frontal and central brain regions.
 
-![example of a 4-channel spectrogram](data_preprocessing/spectrogram_ADHD_4c_example.png)
+<p align="center">
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/spectrogram_control_4c_example.png"/>
+</p>
 
 Each configuration is evaluated separately for EO and EC recordings.
 
@@ -128,15 +130,24 @@ If the Friedman test indicates a statistically significant difference, post-hoc 
 
 The best overall reported result was obtained by VGG16 using spectrograms generated from four EEG channels under the eyes-closed condition.
 
-19-channel spectrogram condition
-![19-channel results](results/EEG_19ch_results.png)
+19-channel spectrogram condition:
+<p align="center">
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_19ch_results.png"/>
+</p>
 
-4-channel spectrogram condition
-![4-channel results](results/EEG_4ch_results.png)
+
+4-channel spectrogram condition:
+<p align="center">
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_4ch_results.png"/>
+</p>
+
 
 Statistical tests showed that VGG16 performed significantly differently from InceptionV3 in the four-channel EC setup (Friedman test p = 0.0269; direct comparison p = 0.0179).
 
-![Post-hoc analysis results](results/Post_hoc_results.png)
+<p align="center">
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/Post_hoc_results.png"/>
+</p>
+
 
 For the other three configurations, the Friedman test did not identify statistically significant differences between the evaluated architectures at the 0.05 significance level.
 
