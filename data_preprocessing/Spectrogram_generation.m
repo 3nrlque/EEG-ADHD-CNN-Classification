@@ -5,8 +5,8 @@
 clear all; close all; clc;
 
 % Input and Output Directories
-inFolder = 'C:\Users\Enrique\Desktop\Studia\magisterka\praca magisterska\10s SEGMENTS 4 kanały\Fragmenty_10s_4_kanały'; 
-outFolder = 'C:\Users\Enrique\Desktop\Studia\magisterka\praca magisterska\10s SEGMENTS 4 kanały\spektrogramy';
+inFolder = '////'; 
+outFolder = '////';
 
 % Spectrogram Parameters
 winSec = 2;             % Window length in seconds

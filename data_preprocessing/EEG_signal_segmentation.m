@@ -25,7 +25,7 @@ subjectsA = { "sub-88015117", "sub-88015565", "sub-88028433", "sub-88029425", "s
 
 % Configure Input Data
 % Root directory containing the preprocessed EEG recordings
-rootFolder = "";
+rootFolder = "////";
 filereadpath=rootFolder;
 
 subjects=subjectsH;
@@ -92,7 +92,7 @@ for i = 1:numel(subjects)
 
             %% Configure the Output Directory
             oldPath=filereadpath;
-            newPath = strrep(oldPath, 'New Preprocessed LAP ICA 26 Channels', '10s SEGMENTS 4 kanały');
+            newPath = strrep(oldPath, 'New Preprocessed EEG 4 Channels', '10s SEGMENTS 4 channels');
             filename=erase(list_filename,strcat('_',subjID));
             Fileread=strcat(newPath,subjID,'\');
 

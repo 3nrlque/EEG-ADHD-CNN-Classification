@@ -8,7 +8,7 @@ clear all; close all; clc;
 % 0 - Control 
 
 % Root directory containing the segmented EEG recordings
- rootFolder = 'C:\Users\Enrique\Desktop\Studia\magisterka\praca magisterska\10s SEGMENTS 4 kanały';
+ rootFolder = '////';
 
 % Define Participant Groups
 % Participant IDs for adult healthy control subjects
@@ -36,7 +36,7 @@ subjects=subjectsA;
 chan_19 = {'Fp1','Fp2','F7','F3','Fz','F4', 'F8', 'T3', 'C3', 'Cz', 'C4','T4', 'T5', 'P3', 'Pz','P4','T6', 'O1','O2'}; 
 
 % Output directory for individual 10-second EEG segments
-rootOutFolder = fullfile(rootFolder,'Fragmenty_10s_4_kanały'); % <--- nowy folder na fragmenty
+rootOutFolder = fullfile(rootFolder,'Fragments_10s_4_channels'); % <--- new folder
 
 % Process each participant in the selected group
 for i = 1:numel(subjects)
