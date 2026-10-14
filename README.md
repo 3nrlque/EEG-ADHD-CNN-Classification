@@ -72,7 +72,7 @@ Two channel configurations are investigated:
 - **4-channel configuration:** focusing on frontal and central brain regions.
 
 <p align="center">
-  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/spectrogram_control_4c_example.png"/>
+  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/spectrogram_ADHD_4c_example.png"/>
 </p>
 
 Each configuration is evaluated separately for EO and EC recordings.
