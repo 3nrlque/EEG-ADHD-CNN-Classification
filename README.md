@@ -155,7 +155,7 @@ Statistical tests showed that VGG16 performed significantly differently from Inc
 
 For the other three configurations, the Friedman test did not identify statistically significant differences between the evaluated architectures at the 0.05 significance level.
 
-These findings suggest that model performance depends on both the selected EEG representation and the network architecture. However, the results do not establish that the approach is sufficiently reliable for standalone clinical diagnosis.
+These results suggest that model performance depends on both the EEG representation and the network architecture. However, they don't prove that this method is reliable enough for standalone clinical diagnosis
 
 ## Possible improvements
 
