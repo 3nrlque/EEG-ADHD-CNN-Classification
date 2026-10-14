@@ -64,7 +64,9 @@ The spectrogram generation procedure uses:
 Two channel configurations are investigated:
 
 - **19-channel configuration:** uses standard 10-20 electrode system.
+![example of a 19-channel spectrogram](data_perprocessing/spectrogram_control_19c_example.png)
 - **4-channel configuration:** focusing on frontal and central brain regions.
+![example of a 4-channel spectrogram](data_perprocessing/spectrogram_ADHD_4c_example.png)
 
 Each configuration is evaluated separately for EO and EC recordings.
 
