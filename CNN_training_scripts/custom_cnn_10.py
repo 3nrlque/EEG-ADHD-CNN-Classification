@@ -15,13 +15,13 @@ import random
 
 # Reproducibility
 
-#def set_seed(seed=67):
- #   np.random.seed(seed)
- #   tf.random.set_seed(seed)
- #   random.seed(seed)
+def set_seed(seed=67):
+    np.random.seed(seed)
+    tf.random.set_seed(seed)
+    random.seed(seed)
 
 
-#set_seed(67)
+set_seed(67)
 
 
 # Data loading and preprocessing
