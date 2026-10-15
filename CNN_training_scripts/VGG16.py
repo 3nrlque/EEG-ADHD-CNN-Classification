@@ -268,7 +268,7 @@ if __name__ == "__main__":
     print(f"Recall:     {recall:.4f}")
     print(f"F1-score:   {f1:.4f}")
 
-    print("\nRaport:")
+    print("\nReport:")
     print(classification_report(all_true, all_pred, target_names=["Control", "ADHD"], zero_division=0))
 
     # Patient level results
