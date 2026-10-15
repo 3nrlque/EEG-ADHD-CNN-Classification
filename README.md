@@ -138,13 +138,13 @@ The best overall reported result was obtained by VGG16 using spectrograms genera
 
 19-channel spectrogram condition:
 <p align="center">
-  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_19ch_results.png"/>
+  <img width="90%" alt="19-channel results"  src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_19ch_results.png"/>
 </p>
 
 
 4-channel spectrogram condition:
 <p align="center">
-  <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_4ch_results.png"/>
+  <img width="90%" alt="4-channel results"  src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_4ch_results.png"/>
 </p>
 
 
