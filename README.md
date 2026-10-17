@@ -73,7 +73,7 @@ Two channel configurations are investigated:
 Both spectrograms correspond to the same subject and the same time segment.
 
 <p align="center">
-  <img width="40%" alt="19-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/19ch_example_spectrogram.png"/> <img width="40%" alt="4-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/4ch_example_spectrogram.png"/>
+  <img width="50%" alt="19-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/19ch_example_spectrogram.png"/> <img width="50%" alt="4-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/4ch_example_spectrogram.png"/>
 </p>
 
 In the first session, the models were trained on spectrograms generated from 19 channels of the standard 10–20 electrode system. In the second session, the models were trained on spectrograms generated using only four selected channels: F3, Fz, F4, and Cz. The selection of these channels was motivated by the characteristics of the theta-to-beta ratio (TBR), which is most prominent over the frontal and central cortical regions.
