@@ -1,8 +1,8 @@
 # ADHD Classification Using Convolutional Neural Networks Based on EEG Spectrograms
 
-## Projcet overview
+## Project overview
 
-The objective of this project is to evaluate whether convolutional neural networks (CNNs) can distinguish adults with ADHD from healthy controls using time-frequency representations of EEG signals.
+The objective of this project was to evaluate whether convolutional neural networks (CNNs) can distinguish adults with ADHD from healthy controls using time-frequency representations of EEG signals.
 
 The project uses Short-Time Fourier Transform (STFT) spectrograms as image inputs to deep learning models.
 
@@ -11,7 +11,7 @@ The experiments investigate two main factors:
 - **EEG channel configuration:** spectrograms generated from 19 channels or a selected 4 channels.
 - **Recording condition:** EEG signals recorded with eyes open (EO) or eyes closed (EC).
 
-Five CNN architectures are evaluated compare their classification performance:
+Five CNN architectures are evaluated to compare their classification performance:
 
 * **custom 4-layer CNN**
 * **custom 10-layer CNN**
@@ -39,17 +39,17 @@ The project uses a subset consisting of healthy adults and patients with ADHD ol
 
 ## Methodology
 
-Each two-minute recording is divided into twelve non-overlapping segments of 10 seconds. Each segment is represented by a spectrogram, resulting in 924 samples per recording condition and channel configuration.
-
 ### EEG Preprocessing
 
 The EEG recordings were preprocessed before being used in the experiments. The preprocessing pipeline included:
 
-- Independent Component Analysis (ICA) for artifact removal.
-- Laplacian reference for spatial filtering.
-- Band-pass filtering between 0.5 Hz and 40 Hz.
-- Notch filtering at 50 Hz to suppress power-line interference.
-- Segmentation into 10-second intervals.
+* Raw EEG data acquisition,
+* Independent Component Analysis (ICA) for artifact removal,
+* Laplacian reference for spatial filtering,
+* Band-pass filtering between 0.5 Hz and 40 Hz,
+* Notch filtering at 50 Hz to suppress power-line interference,
+* Segmentation into 10-second intervals,
+* Spectrogram generation.
 
 <p align="center">
   <img src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/preprocessing_pipeline.png"/>
@@ -61,27 +61,24 @@ Each EEG segment is transformed into a time-frequency representation using the S
 
 The spectrogram generation procedure uses:
 
-- A 2-second Hamming window.
-- A 90% overlap between consecutive windows.
-- Averaging of spectral power across the selected EEG channels.
-- Logarithmic scaling of spectral power.
-- Image resizing to 224 × 224 pixels.
+* a 2-second Hamming window,
+* a 90% overlap between consecutive windows,
+* averaging of spectral power across the selected EEG channel,
+* logarithmic scaling of spectral power,
+* image resizing to 224 × 224 pixels.
 
 Two channel configurations are investigated:
 
-- **19-channel configuration:** uses standard 10-20 electrode system.
+**19-channel configuration** on the left and **4-channel configuration** on the right
+Both spectrograms correspond to the same subject and the same time segment.
 
 <p align="center">
-  <img width="40%" alt="19-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/spectrogram_control_19c_example.png"/>
+  <img width="60%" alt="19-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/19ch_example_spectrogram.png"/><img width="60%" alt="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/4ch_example_spectrogram.png"/>
 </p>
 
-- **4-channel configuration:** focusing on frontal and central brain regions.
+In the first session, the models were trained on spectrograms generated from 19 channels of the standard 10–20 electrode system. In the second session, the models were trained on spectrograms generated using only four selected channels: F3, Fz, F4, and Cz. The selection of these channels was motivated by the characteristics of the theta-to-beta ratio (TBR), which is most prominent over the frontal and central cortical regions.
 
-<p align="center">
-  <img width="40%" alt="4-channel spectrogram example" src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/data_preprocessing/spectrogram_ADHD_4c_example.png"/>
-</p>
-
-Each configuration is evaluated separately for EO and EC recordings.
+Each configuration is evaluated separately for EO and EC recordings. Ultimately, the dataset consisted of 924 spectrograms for each recording condition and channel configuration.
 
 ### CNN Architectures
 
@@ -120,11 +117,11 @@ For each participant, the model produces a probability for every spectrogram. Th
 
 Model performance is assessed using the following classification metrics:
 
-- **Accuracy:** proportion of correctly classified participants.
-- **Recall:** proportion of participants with ADHD correctly identified.
-- **Specificity:** proportion of control participants correctly identified.
-- **Precision:** proportion of positive predictions that are correct.
-- **F1-score:** harmonic mean of precision and recall.
+* **Accuracy:** proportion of correctly classified participants,
+* **Recall:** proportion of participants with ADHD correctly identified,
+* **Specificity:** proportion of control participants correctly identified,
+* **Precision:** proportion of positive predictions that are correct,
+* **F1-score:** harmonic mean of precision and recall.
 
 ### Statistical Analysis
 
@@ -141,12 +138,10 @@ The best overall reported result was obtained by VGG16 using spectrograms genera
   <img width="90%" alt="19-channel results"  src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_19ch_results.png"/>
 </p>
 
-
 4-channel spectrogram condition:
 <p align="center">
   <img width="90%" alt="4-channel results"  src="https://github.com/3nrlque/EEG-ADHD-CNN-Classification/blob/main/results/EEG_4ch_results.png"/>
 </p>
-
 
 Statistical tests showed that VGG16 performed significantly differently from InceptionV3 in the four-channel EC setup (Friedman test p = 0.0269; direct comparison p = 0.0179).
 
@@ -157,7 +152,13 @@ Statistical tests showed that VGG16 performed significantly differently from Inc
 
 For the other three configurations, the Friedman test did not identify statistically significant differences between the evaluated architectures at the 0.05 significance level.
 
-These results suggest that model performance depends on both the EEG representation and the network architecture. However, they don't prove that this method is reliable enough for standalone clinical diagnosis
+The results showed that reducing the number of EEG channels used improved classification performance. The average accuracy of the models was higher for spectrograms generated from 4 channels than for those generated using all available channels. For both channel configurations, the models achieved higher average accuracy under the EC condition than under the EO condition.
+
+The improved performance observed with spectrograms generated from 4 EEG channels may be attributed to the selection of channels containing more discriminative information for distinguishing individuals with ADHD from healthy controls. Using a smaller number of channels may also reduce the influence of irrelevant information and redundant features, allowing CNNs to focus on more task-relevant time-frequency patterns.
+
+The higher average accuracy obtained under the EC condition may be related to differences in brain activity between eyes-closed and eyes-open states. Closing the eyes typically increases posterior alpha activity, whereas opening the eyes suppresses this rhythm and changes the spectral distribution of EEG activity. These differences may produce more distinguishable time-frequency patterns in EC spectrograms, potentially facilitating classification.
+
+The obtained results are insufficient for the tested models to be used as standalone diagnostic tools. However, the best-performing networks, which demonstrated high sensitivity in correctly identifying individuals with ADHD, could potentially serve as objective decision-support tools to assist healthcare professionals.
 
 ## Possible improvements
 
