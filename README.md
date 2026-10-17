@@ -70,6 +70,7 @@ The spectrogram generation procedure uses:
 Two channel configurations are investigated:
 
 **19-channel configuration** on the left and **4-channel configuration** on the right
+
 Both spectrograms correspond to the same subject and the same time segment.
 
 <p align="center">
